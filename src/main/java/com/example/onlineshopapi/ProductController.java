@@ -54,9 +54,9 @@ public class ProductController {
         return productRepository.findAll();
     }
 
-    @PutMapping()
-    void update(@RequestBody Product todoItem){
-        productRepository.save(todoItem);
+    @PutMapping("/{id}")
+    void update(@RequestBody Product product){
+        productRepository.save(product);
     }
 
     @DeleteMapping("/{id}")
